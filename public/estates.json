@@ -1,0 +1,110 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Penthouse",
+      "segment_name": "Luxury",
+      "description": "Stunning penthouse with panoramic city views",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "New York City",
+      "facilities": ["Spacious living room", "Infinity pool", "Gourmet kitchen"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 2,
+      "estate_title": "Beachfront properties",
+      "segment_name": "Luxury",
+      "description": "Exquisite beachfront property with private access to white sandy beaches",
+      "price": "$8,500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Direct beach access", "Private spa", "Ocean-view terrace"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 3,
+      "estate_title": "Resorts",
+      "segment_name": "Luxury",
+      "description": "Luxurious resort with world-class amenities and services",
+      "price": "$15,000,000",
+      "status": "rent",
+      "area": "20 acres",
+      "location": "Bora Bora",
+      "facilities": ["Multiple infinity pools", "Private villas", "Five-star dining"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 4,
+      "estate_title": "Private Islands",
+      "segment_name": "Luxury",
+      "description": "Exclusive private island retreat with pristine beaches and lush landscapes",
+      "price": "$25,000,000",
+      "status": "sale",
+      "area": "100 acres",
+      "location": "Caribbean",
+      "facilities": ["Helipad", "Tennis court", "Yacht mooring"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 5,
+      "estate_title": "Villas",
+      "segment_name": "Luxury",
+      "description": "Magnificent villa nestled amidst rolling hills and vineyards",
+      "price": "$7,200,000",
+      "status": "rent",
+      "area": "8000 sq ft",
+      "location": "Tuscany, Italy",
+      "facilities": ["Wine cellar", "Private cinema", "Landscaped gardens"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 6,
+      "estate_title": "Mansions",
+      "segment_name": "Luxury",
+      "description": "Grand mansion with opulent interiors and sprawling grounds",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Beverly Hills, California",
+      "facilities": ["Indoor pool", "Gymnasium", "Guest house"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 7,
+      "estate_title": "Luxury Chalets",
+      "segment_name": "Luxury",
+      "description": "Elegant chalet nestled in the Swiss Alps offering breathtaking mountain views",
+      "price": "$6,500,000",
+      "status": "rent",
+      "area": "6000 sq ft",
+      "location": "Verbier, Switzerland",
+      "facilities": ["Ski-in/ski-out access", "Sauna", "Home theater"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 8,
+      "estate_title": "Waterfront Estates",
+      "segment_name": "Luxury",
+      "description": "Impressive waterfront estate with private dock and lush gardens",
+      "price": "$10,800,000",
+      "status": "sale",
+      "area": "10 acres",
+      "location": "Hamptons, New York",
+      "facilities": ["Boat house", "Tennis court", "Outdoor kitchen"],
+      "image": "image_url_here"
+    },
+    {
+      "id": 9,
+      "estate_title": "Luxury Ski Resorts",
+      "segment_name": "Luxury",
+      "description": "Spectacular ski resort offering ski-in/ski-out accommodations and gourmet dining",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "30 acres",
+      "location": "Aspen, Colorado",
+      "facilities": ["Ski valet service", "Spa and wellness center", "Fine dining restaurant"],
+      "image": "image_url_here"
+    }
+  ]

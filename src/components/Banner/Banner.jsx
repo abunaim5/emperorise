@@ -15,6 +15,7 @@ import './Banner.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import SecondaryButton from '../Common/SecondaryButton/SecondaryButton';
 
 
 const Banner = () => {
@@ -37,17 +38,35 @@ const Banner = () => {
             >
                 <SwiperSlide>
                     <div style={{ backgroundImage: `url(${slideImg1})` }} className="h-full w-full bg-cover bg-no-repeat bg-center">
-                        {/* <img src={slideImg1} alt="" /> */}
+                        <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
+                            <div className='max-w-6xl mx-auto'>
+                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Explore Exclusive Properties</h1>
+                                <h3 className='text-3xl font-semibold text-white text-left mb-10'>We promise to understand your unique needs</h3>
+                                <SecondaryButton></SecondaryButton>
+                            </div>
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{ backgroundImage: `url(${slideImg2})` }} className="h-full w-full bg-cover bg-no-repeat bg-bottom">
-                        {/* <img src={slideImg1} alt="" /> */}
+                        <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
+                            <div className='max-w-6xl mx-auto'>
+                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Discover Your Dream Residence</h1>
+                                <h3 className='text-4xl font-semibold text-white text-left mb-10'>We build your dream house</h3>
+                                <SecondaryButton></SecondaryButton>
+                            </div>
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{ backgroundImage: `url(${slideImg3})` }} className="h-full w-full bg-cover bg-no-repeat bg-center">
-                        {/* <img src={slideImg1} alt="" /> */}
+                        <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
+                            <div className='max-w-6xl mx-auto'>
+                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Luxury Living Redefined</h1>
+                                <h3 className='text-4xl font-semibold text-white text-left mb-10'>Provide a decent level of comfort</h3>
+                                <SecondaryButton></SecondaryButton>
+                            </div>
+                        </div>
                     </div>
                 </SwiperSlide>
             </Swiper>
