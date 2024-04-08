@@ -9,7 +9,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="bg-[#4B0082]">
+        <div className="bg-[#4B0082] bg-opacity-80 absolute z-10 w-full">
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -28,7 +28,18 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-5 py-2 text-lg font-semibold text-[#333333] bg-[#C0C0C0] border-none hover:bg-[#FFD700]">Login</button></Link>
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                        </div>
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 w-52">
+                            <li><a className="">Profile</a></li>               
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
+                    <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold text-[#333333] bg-[#C0C0C0] border-none hover:bg-[#FFD700]">Login</button></Link>
                 </div>
             </div>
         </div>
