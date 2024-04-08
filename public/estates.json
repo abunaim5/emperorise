@@ -9,7 +9,7 @@
       "area": "3000 sq ft",
       "location": "New York City",
       "facilities": ["Spacious living room", "Infinity pool", "Gourmet kitchen"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/XYgt96D4/fernando-alvarez-rodriguez-M7-Gdd-Pq-Jowg-unsplash.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "5000 sq ft",
       "location": "Malibu, California",
       "facilities": ["Direct beach access", "Private spa", "Ocean-view terrace"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/52pk6q6t/sea-view.jpg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "area": "20 acres",
       "location": "Bora Bora",
       "facilities": ["Multiple infinity pools", "Private villas", "Five-star dining"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/0y9BkH53/sara-dubler-Koei-7y-Yt-Io-unsplash.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": "100 acres",
       "location": "Caribbean",
       "facilities": ["Helipad", "Tennis court", "Yacht mooring"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/xCBZ9fqy/cauayan-island-resort-7-O1m-Q9s-Xys0-unsplash.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "8000 sq ft",
       "location": "Tuscany, Italy",
       "facilities": ["Wine cellar", "Private cinema", "Landscaped gardens"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/9fFKpgvT/aj-alao-cstkc-42-P7-M-unsplash.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "15,000 sq ft",
       "location": "Beverly Hills, California",
       "facilities": ["Indoor pool", "Gymnasium", "Guest house"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/wxsP0mbW/150673.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": "6000 sq ft",
       "location": "Verbier, Switzerland",
       "facilities": ["Ski-in/ski-out access", "Sauna", "Home theater"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/cLWVKLhF/k8-9br-Ib-LCo950-unsplash.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": "10 acres",
       "location": "Hamptons, New York",
       "facilities": ["Boat house", "Tennis court", "Outdoor kitchen"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/mkM5DvHx/im3rd-media-Esf-MI3ou-Ed-E-unsplash.jpg"
     },
     {
       "id": 9,
@@ -105,6 +105,6 @@
       "area": "30 acres",
       "location": "Aspen, Colorado",
       "facilities": ["Ski valet service", "Spa and wellness center", "Fine dining restaurant"],
-      "image": "image_url_here"
+      "image": "https://i.postimg.cc/vHFKjZJG/michal-prucha-q-VKLn-Abq-Z-0-unsplash.jpg"
     }
   ]
