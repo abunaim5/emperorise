@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
+import AOS from 'aos'
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-const EstateCard = ({estate}) => {
-    const {image, estate_title, status, segment_name, location} = estate;
+const EstateCard = ({ estate }) => {
+    const { image, estate_title, status, segment_name, location } = estate;
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1500
+        });
+        AOS.refresh();
+    }, [])
 
     return (
-        <div>
-            <div className="card glass rounded-none text-[#333333]">
+        <div data-aos="fade-up">
+            <div data-aos="flip-left" className="card glass rounded-none text-[#333333]">
                 <figure><img className="h-[245px] w-full" src={image} alt="car!" /></figure>
                 <div className="card-body p-6">
                     <h2 className="card-title">{estate_title}</h2>
