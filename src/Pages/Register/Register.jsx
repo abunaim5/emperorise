@@ -14,7 +14,7 @@ const Register = () => {
         return (
             <div className="flex items-center justify-center py-8 bg-[#F5F5DC]">
                 <Card color="transparent" shadow={false}>
-                    <Typography variant="h4" color="#333333">
+                    <Typography variant="h4" className="text-[#333333]">
                         Sign Up
                     </Typography>
                     <Typography color="gray" className="mt-1 font-normal">
@@ -22,7 +22,7 @@ const Register = () => {
                     </Typography>
                     <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                         <div className="mb-1 flex flex-col gap-6">
-                            <Typography variant="h6" color="#333333" className="-mb-3">
+                            <Typography variant="h6" className="-mb-3 text-[#333333]">
                                 Your Name
                             </Typography>
                             <Input
@@ -33,7 +33,7 @@ const Register = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="#333333" className="-mb-3">
+                            <Typography variant="h6" className="-mb-3 text-[#333333]">
                                 Your Email
                             </Typography>
                             <Input
@@ -44,7 +44,7 @@ const Register = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="#333333" className="-mb-3">
+                            <Typography variant="h6" className="-mb-3 text-[#333333]">
                                 Photo Url
                             </Typography>
                             <Input
@@ -55,7 +55,7 @@ const Register = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="#333333" className="-mb-3">
+                            <Typography variant="h6" className="-mb-3 text-[#333333]">
                                 Password
                             </Typography>
                             <Input
@@ -69,7 +69,7 @@ const Register = () => {
                             />
                         </div>
                         <Checkbox
-                            className="rounded-none "
+                            className="rounded-none"
                             label={
                                 <Typography
                                     variant="small"
