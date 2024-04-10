@@ -5,7 +5,7 @@ import Estate from "../../components/Estate/Estate";
 const Home = () => {
     return (
         <div className="relative bg-[#F5F5DC]">
-            <div>
+            <div className="bg-[#4B0082] bg-opacity-80 absolute z-10 w-full">
                 <Header></Header>
             </div>
             <div>

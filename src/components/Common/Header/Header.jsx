@@ -9,7 +9,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="bg-[#4B0082] bg-opacity-80 absolute z-10 w-full">
+        <div>
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,7 +34,7 @@ const Header = () => {
                                 <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                             </div>
                         </div>
-                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-[#C0C0C0] w-52">
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white w-52">
                             <li><a className="">My Profile</a></li>
                             <li><a>Logout</a></li>
                         </ul>

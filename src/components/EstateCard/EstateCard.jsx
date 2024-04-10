@@ -5,11 +5,12 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const EstateCard = ({ estate }) => {
-    const { image, estate_title, status, segment_name, location } = estate;
+    const { image, estate_title, status, segment_name, price } = estate;
 
     useEffect(() => {
         AOS.init({
-            duration: 1500
+            duration: 1500,
+            delay: 200
         });
         AOS.refresh();
     }, [])
@@ -22,7 +23,7 @@ const EstateCard = ({ estate }) => {
                     <h2 className="card-title">{estate_title}</h2>
                     <p>Status: {status}</p>
                     <p>Segment: {segment_name}</p>
-                    <p>Location: {location}</p>
+                    <p>Price: {price}</p>
                     <div className="card-actions mt-4">
                         <Link to='/details'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#333333] bg-transparent hover:bg-[#C0C0C0]">View Property</button></Link>
                     </div>
