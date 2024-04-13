@@ -6,6 +6,7 @@ import {
 } from "@material-tailwind/react";
 import Header from "../../components/Common/Header/Header";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Common/Footer/Footer";
 
 const Login = () => {
     function SimpleLoginForm() {
@@ -70,6 +71,9 @@ const Login = () => {
             {
                 SimpleLoginForm()
             }
+            <div className="bg-[#4B0082]">
+                <Footer></Footer>
+            </div>
         </div>
     );
 };

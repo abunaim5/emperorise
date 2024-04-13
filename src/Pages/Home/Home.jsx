@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner/Banner";
+import Footer from "../../components/Common/Footer/Footer";
 import Header from "../../components/Common/Header/Header";
 import Estate from "../../components/Estate/Estate";
 
@@ -11,8 +12,11 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div className="mt-20 max-w-6xl mx-auto">
+            <div className="my-20 max-w-6xl mx-auto">
                 <Estate></Estate>
+            </div>
+            <div className="bg-[#4B0082]">
+                <Footer></Footer>
             </div>
         </div>
     );

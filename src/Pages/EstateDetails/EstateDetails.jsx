@@ -42,7 +42,7 @@ const EstateDetails = () => {
                         <p>Location: {location}</p>
                         <p>Price: {price}</p>
                         <div className="card-actions mt-4">
-                            <Link to='/contact'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-4 font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#333333] bg-transparent hover:bg-[#FFD700] text-base">Buy Now</button></Link>
+                            <Link to='/contact'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#333333] bg-transparent hover:bg-[#FFD700] text-lg">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
