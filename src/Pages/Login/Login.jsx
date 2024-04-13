@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
     function SimpleLoginForm() {
         return (
-            <div className="flex items-center justify-center py-8 bg-[#F5F5DC]">
+            <div className="flex items-center justify-center py-8 h-[calc(100vh-72px)]">
                 <Card color="transparent" shadow={false}>
                     <Typography variant="h4" className="text-[#333333]">
                         Sign In
@@ -47,12 +47,12 @@ const Login = () => {
                         <div>
                             <button>Forgot password?</button>
                         </div>
-                        <Button className="mt-6 rounded-none text-[#333333] bg-[#FFD700]" fullWidth>
+                        <Button className="mt-6 rounded-none text-base text-[#333333] bg-[#FFD700]" fullWidth>
                             sign In
                         </Button>
                         <Typography color="gray" className="mt-4 text-center font-normal">
                             Don&apos;t have an account?{" "}
-                            <Link to='/register'><button className="btn-link text-[#333333] font-medium">
+                            <Link to='/register'><button className="btn-link text-[#333333] font-semibold">
                                 Sign Up
                             </button></Link>
                         </Typography>
@@ -63,7 +63,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="min-h-screen bg-[#F5F5DC]">
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

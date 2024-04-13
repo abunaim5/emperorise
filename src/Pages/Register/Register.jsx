@@ -12,7 +12,7 @@ const Register = () => {
 
     function SimpleRegistrationForm() {
         return (
-            <div className="flex items-center justify-center py-8 bg-[#F5F5DC]">
+            <div className="flex items-center justify-center py-8 h-[calc(100vh-72px)]">
                 <Card color="transparent" shadow={false}>
                     <Typography variant="h4" className="text-[#333333]">
                         Sign Up
@@ -87,12 +87,12 @@ const Register = () => {
                             }
                             containerProps={{ className: "-ml-2.5" }}
                         />
-                        <Button className="mt-6 rounded-none text-[#333333] bg-[#FFD700]" fullWidth>
+                        <Button className="mt-6 text-base rounded-none text-[#333333] bg-[#FFD700]" fullWidth>
                             sign up
                         </Button>
                         <Typography color="gray" className="mt-4 text-center font-normal">
                             Already have an account?{" "}
-                            <Link to='/login'><button className="btn-link text-[#333333] font-medium">
+                            <Link to='/login'><button className="btn-link text-[#333333] font-semibold">
                                 Sign In
                             </button></Link>
                         </Typography>
@@ -103,7 +103,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className="bg-[#F5F5DC] min-h-screen">
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

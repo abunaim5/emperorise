@@ -4,7 +4,6 @@ import EstateCard from "../EstateCard/EstateCard";
 
 const Estate = () => {
     const estates = useLoaderData()
-    console.log(estates);
 
     return (
         <div>
