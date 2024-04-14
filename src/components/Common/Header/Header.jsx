@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiCrenelCrown } from "react-icons/gi";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider/AuthProvider";
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
+
     const links = <>
         <li className=""><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About Us</NavLink></li>
@@ -28,18 +32,19 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost hover:bg-[#C0C0C0] btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    {
+                        user ? <div className="dropdown dropdown-end tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <div tabIndex={0} role="button" className="btn btn-ghost hover:bg-[#C0C0C0] btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                </div>
                             </div>
-                        </div>
-                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white w-52">
-                            <li><a className="">My Profile</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
-                    <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
+                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white w-52">
+                                <li><a className="">My Profile</a></li>
+                                <li><a>Logout</a></li>
+                            </ul>
+                        </div> : <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
+                    }
                 </div>
             </div>
         </div>
