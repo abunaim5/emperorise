@@ -1,36 +1,50 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types'
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
-// create user with email and password
-const createUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
-};
-
-// update user profile
-const updateUser = (name, photoUrl) => {
-    return updateProfile(auth.currentUser, {
-        displayName: name, photoURL: photoUrl
-    })
-}
 const AuthProvider = ({ children }) => {
-        const [user, setUser] = useState(null);
-        console.log(user)
+    const [user, setUser] = useState(null);
 
-        const authInfo = { user, createUser, setUser, updateUser }
-
-        return (
-            <AuthContext.Provider value={authInfo}>
-                {children}
-            </AuthContext.Provider>
-        );
+    // create user with email and password
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
     };
 
-    AuthProvider.propTypes = {
-        children: PropTypes.node
+    // sign out user
+    const logOut = () =>{
+        return signOut(auth);
     }
 
-    export default AuthProvider;
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser=>{
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, [])
+
+    // update user profile
+    const updateUser = (name, photoUrl) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photoUrl
+        })
+    }
+    console.log(user)
+
+    const authInfo = { user, createUser, logOut, setUser, updateUser, }
+
+    return (
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+    );
+};
+
+AuthProvider.propTypes = {
+    children: PropTypes.node
+}
+
+export default AuthProvider;

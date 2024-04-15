@@ -12,6 +12,8 @@ import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import EstateDetails from './Pages/EstateDetails/EstateDetails';
 import AuthProvider from './Providers/AuthProvider/AuthProvider';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
     </AuthProvider>
   </React.StrictMode>,
 )

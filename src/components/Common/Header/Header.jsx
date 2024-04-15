@@ -2,14 +2,25 @@ import { Link, NavLink } from "react-router-dom";
 import { GiCrenelCrown } from "react-icons/gi";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                toast.success('Signed Out')
+            }).catch((error) => {
+                console.error(error);
+            })
+    }
 
     const links = <>
         <li className=""><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About Us</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
+        <li><NavLink to='/update'>Update Profile</NavLink></li>
     </>
 
     return (
@@ -40,10 +51,13 @@ const Header = () => {
                                 </div>
                             </div>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white w-52">
-                                <li><a className="">My Profile</a></li>
-                                <li><a>Logout</a></li>
+                                <li><Link className="">My Profile</Link></li>
+                                <li onClick={handleLogOut}><button>Logout</button></li>
                             </ul>
-                        </div> : <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
+                        </div> : <div className="space-x-3">
+                            <Link to='/register'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Sign Up</button></Link>
+                            <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
+                        </div>
                     }
                 </div>
             </div>

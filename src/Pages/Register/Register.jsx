@@ -11,9 +11,10 @@ import Footer from "../../components/Common/Footer/Footer";
 import { useForm } from "react-hook-form"
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
-    const { createUser, setUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     // console.log(createUser);
 
     const {
@@ -26,13 +27,16 @@ const Register = () => {
     const onSubmit = (data) => {
         const { email, password, name, photoUrl } = data;
         createUser(email, password)
-            .then(res => {
+            .then(() => {
                 updateUser(name, photoUrl)
                     .then(() => console.log('Profile updated'))
                     .catch(error => console.error(error))
-                    setUser(res.user);
+                    toast.success('Successfully Register');
             })
-            .catch(error => console.error(error));
+            .catch(error => {
+                const errorMessage = error.message;
+                toast.error(`${errorMessage}`)
+            });
     }
 
     return (
