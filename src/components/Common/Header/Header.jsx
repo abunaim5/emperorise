@@ -51,7 +51,7 @@ const Header = () => {
                                 </div>
                             </div>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white w-52">
-                                <li><Link className="">My Profile</Link></li>
+                                <li><Link to='/profile' className="">My Profile</Link></li>
                                 <li onClick={handleLogOut}><button>Logout</button></li>
                             </ul>
                         </div> : <div className="space-x-3">

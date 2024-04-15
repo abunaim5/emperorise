@@ -14,6 +14,7 @@ import EstateDetails from './Pages/EstateDetails/EstateDetails';
 import AuthProvider from './Providers/AuthProvider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserProfile from './Pages/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/profile',
+        element: <UserProfile></UserProfile>
       }
     ]
   },
