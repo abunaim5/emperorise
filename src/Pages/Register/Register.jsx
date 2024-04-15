@@ -45,7 +45,7 @@ const Register = () => {
                 <Header></Header>
             </div>
 
-            <div className="flex items-center justify-center py-8 h-[calc(100vh-72px)]">
+            <div className="flex items-center justify-center py-32">
                 <Card color="transparent" shadow={false}>
                     <Typography variant="h4" className="text-[#333333]">
                         Sign Up

@@ -10,10 +10,10 @@ const Header = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                toast.success('Signed Out')
+                toast.success('You are signed out')
             }).catch((error) => {
                 console.error(error);
-            })
+            });
     }
 
     const links = <>
