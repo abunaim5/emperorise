@@ -7,6 +7,7 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [profileUpdate, setProfileUpdate] = useState(false);
 
     // create user with email and password
     const createUser = (email, password) => {
@@ -23,14 +24,6 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    // Auth state change
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser=>{
-            setUser(currentUser);
-        });
-        return () => unsubscribe();
-    }, [])
-
     // update user profile
     const updateUser = (name, photoUrl) => {
         return updateProfile(auth.currentUser, {
@@ -39,7 +32,15 @@ const AuthProvider = ({ children }) => {
         })
     }
 
-    const authInfo = { user, setUser, createUser,logInUser, logOut, updateUser }
+    // Auth state change
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser=>{
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, [profileUpdate])
+
+    const authInfo = { user, setUser, createUser,logInUser, logOut, updateUser, profileUpdate, setProfileUpdate }
 
     return (
         <AuthContext.Provider value={authInfo}>

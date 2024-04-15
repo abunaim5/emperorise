@@ -15,6 +15,7 @@ import AuthProvider from './Providers/AuthProvider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserProfile from './Pages/UserProfile/UserProfile';
+import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <UserProfile></UserProfile>
+      },
+      {
+        path: '/update',
+        element: <UpdateProfile></UpdateProfile>
       }
     ]
   },
