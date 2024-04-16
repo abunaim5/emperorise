@@ -35,8 +35,8 @@ const Login = () => {
                 toast.success('Successfully Logged In');
                 reset();
             })
-            .catch(error => {
-                toast.error(`${error.message}`);
+            .catch(() => {
+                toast.error("Invalid email or password");
             })
     };
 

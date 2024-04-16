@@ -3,18 +3,20 @@ import {
     Input,
     Checkbox,
     Button,
-    Typography,
+    Typography
 } from "@material-tailwind/react";
 import Header from "../../components/Common/Header/Header";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Common/Footer/Footer";
 import { useForm } from "react-hook-form"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
     const { createUser, updateUser } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
     // console.log(createUser);
 
     const {
@@ -26,8 +28,8 @@ const Register = () => {
     // console.log(errors)
     const onSubmit = (data) => {
         const { email, password, name, photoUrl } = data;
-        if(!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)){
-            return toast.error('Password must have at least one uppercase and one lowercase letter');
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+            return toast.error('Password must have at least one uppercase and one lowercase letter')
         }
         createUser(email, password)
             .then(() => {
@@ -40,6 +42,10 @@ const Register = () => {
                 const errorMessage = error.message;
                 toast.error(`${errorMessage}`)
             });
+    }
+
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
     }
 
     return (
@@ -102,19 +108,20 @@ const Register = () => {
                                 Password
                             </Typography>
                             <Input
-                                {...register('password', {pattern: /^(?=.*[a-z])(?=.*[A-Z]).+$/, message: 'password should'}, {
+                                {...register('password', {
                                     required: 'This field is required', minLength: {
                                         value: 6,
                                         message: 'Password should be 6 character or more'
                                     }
                                 })}
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 size="lg"
                                 placeholder="********"
                                 className=" !border-t-blue-gray-200 rounded-none focus:!border-t-[#FFD700]"
                                 labelProps={{
                                     className: "before:content-none after:content-none",
                                 }}
+                                icon={<button onClick={handleShowPassword} type="button">{showPassword ? <FaEyeSlash /> : <FaEye />}</button>}
                             />
                             {errors.password && <span className="text-red-700 -mt-5">{errors.password.message}</span>}
                         </div>
