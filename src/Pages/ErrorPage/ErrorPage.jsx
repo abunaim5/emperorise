@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (
         <div className="bg-[#F5F5DC] h-screen flex items-center justify-center text-center">
+            <Helmet>
+                <title>Emperorise | Error Page</title>
+            </Helmet>
             <section className="flex items-center h-full w-full p-16 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
                 <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
                     <div className="max-w-md text-center">

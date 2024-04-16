@@ -13,6 +13,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const { createUser, updateUser } = useContext(AuthContext);
@@ -50,6 +51,9 @@ const Register = () => {
 
     return (
         <div className="bg-[#F5F5DC] min-h-screen">
+            <Helmet>
+                <title>Emperorise | Register</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

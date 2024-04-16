@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
     const { logInUser, user, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
@@ -60,6 +61,9 @@ const Login = () => {
 
     return (
         <div className="min-h-screen bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Login</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

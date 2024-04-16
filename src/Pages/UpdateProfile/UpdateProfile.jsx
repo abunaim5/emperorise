@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const { user, updateUser, profileUpdate, setProfileUpdate } = useContext(AuthContext);
@@ -25,7 +26,6 @@ const UpdateProfile = () => {
                 toast.success('Profile Updated')
             })
             .catch(error => console.error(error))
-        // setUser({...user, displayName: name, photoURL: photo});
     }
 
     useEffect(() => {
@@ -39,6 +39,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Update</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>
@@ -48,10 +51,10 @@ const UpdateProfile = () => {
                         <div className="space-y-2 col-span-full lg:col-span-2">
                             <p className="font-bold text-2xl">Update Your Profile</p>
                             <p><span className="font-semibold">Name: </span><span>{user && user?.displayName}</span></p>
-                            <p><span className="font-semibold">Email: </span><span>{user && user?.email}</span></p>
+                            <p><span className="font-semibold">Email: </span><span>{user && user?.email || 'Not provide'}</span></p>
                             <p className=""><span className="font-semibold">Photo URL: </span><span>{user && user?.photoURL}</span></p>
                         </div>
-                        <div className="space-y-6 text-[#333333] text-base">
+                        <div className="space-y-6 text-[#333333] text-base col-span-full lg:col-span-2">
                             <div className="sm:col-span-3">
                                 <label htmlFor="username" className="font-semibold">Username</label>
                                 <input

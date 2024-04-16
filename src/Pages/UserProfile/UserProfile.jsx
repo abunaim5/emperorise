@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { MdOutlinePhotoSizeSelectActual, MdOutlineMailOutline } from "react-icons/md";
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const UserProfile = () => {
     const { user } = useContext(AuthContext);
@@ -21,6 +22,9 @@ const UserProfile = () => {
 
     return (
         <div className="bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Profile</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

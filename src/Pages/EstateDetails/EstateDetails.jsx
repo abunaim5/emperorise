@@ -9,6 +9,7 @@ import { MdOutlineAreaChart } from "react-icons/md";
 import { IoPricetagOutline } from "react-icons/io5";
 import { GrStatusInfo } from "react-icons/gr";
 import { MdOutlineHomeWork } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {
     const { id } = useParams();
@@ -27,6 +28,9 @@ const EstateDetails = () => {
 
     return (
         <div className="min-h-screen bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Estate Details</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>

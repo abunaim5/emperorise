@@ -5,6 +5,7 @@ import Header from "../../components/Common/Header/Header";
 import Estate from "../../components/Estate/Estate";
 import { ColorRing } from "react-loader-spinner";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     const {loading} = useContext(AuthContext);
@@ -15,6 +16,9 @@ const Home = () => {
 
     return (
         <div className="relative bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Home</title>
+            </Helmet>
             <div className="bg-[#4B0082] bg-opacity-80 absolute z-10 w-full">
                 <Header></Header>
             </div>
