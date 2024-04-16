@@ -26,12 +26,15 @@ const Register = () => {
     // console.log(errors)
     const onSubmit = (data) => {
         const { email, password, name, photoUrl } = data;
+        if(!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)){
+            return toast.error('Password must have at least one uppercase and one lowercase letter');
+        }
         createUser(email, password)
             .then(() => {
                 updateUser(name, photoUrl)
                     .then(() => console.log('Profile updated'))
                     .catch(error => console.error(error))
-                    toast.success('Successfully Register');
+                toast.success('Successfully Register');
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -99,7 +102,7 @@ const Register = () => {
                                 Password
                             </Typography>
                             <Input
-                                {...register('password', {
+                                {...register('password', {pattern: /^(?=.*[a-z])(?=.*[A-Z]).+$/, message: 'password should'}, {
                                     required: 'This field is required', minLength: {
                                         value: 6,
                                         message: 'Password should be 6 character or more'
