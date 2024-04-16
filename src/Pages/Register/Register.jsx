@@ -121,7 +121,7 @@ const Register = () => {
                                 labelProps={{
                                     className: "before:content-none after:content-none",
                                 }}
-                                icon={<button onClick={handleShowPassword} type="button">{showPassword ? <FaEyeSlash /> : <FaEye />}</button>}
+                                icon={<button onClick={handleShowPassword} type="button" className="text-lg">{showPassword ? <FaEyeSlash /> : <FaEye />}</button>}
                             />
                             {errors.password && <span className="text-red-700 -mt-5">{errors.password.message}</span>}
                         </div>

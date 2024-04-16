@@ -3,6 +3,7 @@ import { GiCrenelCrown } from "react-icons/gi";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
