@@ -20,7 +20,7 @@ const Header = () => {
         <li className=""><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About Us</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        <li><NavLink to='/update'>Update Profile</NavLink></li>
+        {user && <li><NavLink to='/update'>Update Profile</NavLink></li>}
     </>
 
     return (
