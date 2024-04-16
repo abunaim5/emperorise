@@ -5,7 +5,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import Header from "../../components/Common/Header/Header";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../../components/Common/Footer/Footer";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
@@ -14,6 +14,8 @@ import { toast } from "react-toastify";
 
 const Login = () => {
     const { logInUser, user } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -29,6 +31,7 @@ const Login = () => {
         const { email, password } = data;
         logInUser(email, password)
             .then(() => {
+                navigate(location?.state ? location.state : '/')
                 toast.success('Successfully Logged In');
                 reset();
             })
