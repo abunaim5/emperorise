@@ -1,9 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types'
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext(null)
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -17,13 +18,13 @@ const AuthProvider = ({ children }) => {
     };
 
     // sign out user
-    const logOut = () =>{
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     };
 
     // login user
-    const logInUser = (email, password) =>{
+    const logInUser = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
@@ -37,16 +38,33 @@ const AuthProvider = ({ children }) => {
         })
     }
 
+    // login with google
+    const loginWithGoogle = () => {
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider);
+    }
+
     // Auth state change
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser=>{
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             setLoading(false);
         });
         return () => unsubscribe();
     }, [profileUpdate])
 
-    const authInfo = { user, setUser, createUser,logInUser, logOut, updateUser, profileUpdate, setProfileUpdate, loading }
+    const authInfo = {
+        user,
+        setUser,
+        createUser,
+        logInUser,
+        logOut,
+        updateUser,
+        profileUpdate,
+        setProfileUpdate,
+        loading,
+        loginWithGoogle
+    }
 
     return (
         <AuthContext.Provider value={authInfo}>

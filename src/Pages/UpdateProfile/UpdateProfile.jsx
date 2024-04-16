@@ -49,7 +49,7 @@ const UpdateProfile = () => {
                             <p className="font-bold text-2xl">Update Your Profile</p>
                             <p><span className="font-semibold">Name: </span><span>{user && user?.displayName}</span></p>
                             <p><span className="font-semibold">Email: </span><span>{user && user?.email}</span></p>
-                            <p><span className="font-semibold">Photo URL: </span><span>{user && user?.photoURL}</span></p>
+                            <p className=""><span className="font-semibold">Photo URL: </span><span>{user && user?.photoURL}</span></p>
                         </div>
                         <div className="space-y-6 text-[#333333] text-base">
                             <div className="sm:col-span-3">
