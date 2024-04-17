@@ -2,7 +2,7 @@
 Welcome to Emperorise, your premier destination for luxury real estate. Explore our exclusive properties and experience the epitome of opulence and elegance.
 
 ### Live Site URL:
-[Emperorise] (https://emperorisee.web.app)
+[Emperorise](https://emperorisee.web.app)
 
 ### Features and Characteristics:
 * Exquisite Properties: Browse through a curated selection of the most luxurious residences, estates, and penthouses in sought-after locations worldwide.
