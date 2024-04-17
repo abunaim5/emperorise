@@ -3,6 +3,7 @@ import Footer from "../../components/Common/Footer/Footer";
 import Header from "../../components/Common/Header/Header";
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const ContactInfo = () => {
 
@@ -16,6 +17,9 @@ const ContactInfo = () => {
 
     return (
         <div className="bg-[#F5F5DC]">
+            <Helmet>
+                <title>Emperorise | Contact</title>
+            </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>
@@ -57,7 +61,7 @@ const ContactInfo = () => {
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
-                            <textarea rows="3" className="block w-full rounded-md bg-transparent outline-none mt-2 border border-[#FFD700]"></textarea>
+                            <textarea rows="3" className="block p-3 w-full rounded-md bg-transparent outline-none mt-2 border border-[#FFD700]"></textarea>
                         </label>
                         <button type="button" className="self-center px-8 py-3 text-lg font-semibold rounded text-[#333333] bg-[#FFD700]">Submit</button>
                     </form>
