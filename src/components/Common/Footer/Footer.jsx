@@ -14,10 +14,10 @@ const Footer = () => {
 
     return (
         <footer data-aos='fade-down' className="p-10 max-w-6xl mx-auto text-[#C0C0C0] py-16 px-2">
-            <div className="footer pb-10 border-b border-[#C0C0C0]">
+            <div className="footer text-base pb-10 border-b border-[#C0C0C0]">
                 <aside className="">
-                    <h2 className="cursor-pointer text-xl justify-start md:justify-center font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>
-                    <p>Emperorise Industries Ltd.<br />Providing your dream properties since 2015</p>
+                    <h2 className="cursor-pointer text-xl md:text-2xl justify-start md:justify-center font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>
+                    <p className="text-base">Emperorise Industries Ltd.<br />Providing your dream properties since 2015</p>
                 </aside>
                 <nav className="">
                     <h6 className="footer-title">Services</h6>

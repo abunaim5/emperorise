@@ -36,7 +36,7 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <h2 className="cursor-pointer text-xl font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>
+                    <h2 className="cursor-pointer text-xl md:text-2xl font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-[#C0C0C0] px-1 text-base">
