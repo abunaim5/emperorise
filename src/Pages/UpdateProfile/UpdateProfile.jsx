@@ -40,7 +40,7 @@ const UpdateProfile = () => {
     return (
         <div className="bg-[#F5F5DC]">
             <Helmet>
-                <title>Emperorise | Update</title>
+                <title>Emperorise | Update Profile</title>
             </Helmet>
             <div className="bg-[#4B0082]">
                 <Header></Header>

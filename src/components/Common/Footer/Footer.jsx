@@ -1,8 +1,19 @@
+import { useEffect } from "react";
 import { GiCrenelCrown } from "react-icons/gi";
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 const Footer = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            delay: 200
+        });
+        AOS.refresh();
+    }, [])
+
     return (
-        <footer className="p-10 max-w-6xl mx-auto text-[#C0C0C0] py-16 px-0">
+        <footer data-aos='fade-up' className="p-10 max-w-6xl mx-auto text-[#C0C0C0] py-16 px-0">
             <div className="footer pb-10 border-b border-[#C0C0C0]">
                 <aside>
                     <h2 className="cursor-pointer text-xl font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>

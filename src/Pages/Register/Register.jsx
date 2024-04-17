@@ -9,11 +9,13 @@ import Header from "../../components/Common/Header/Header";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Common/Footer/Footer";
 import { useForm } from "react-hook-form"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 const Register = () => {
     const { createUser, updateUser } = useContext(AuthContext);
@@ -49,6 +51,14 @@ const Register = () => {
         setShowPassword(!showPassword);
     }
 
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            delay: 200
+        });
+        AOS.refresh();
+    }, [])
+
     return (
         <div className="bg-[#F5F5DC] min-h-screen">
             <Helmet>
@@ -58,7 +68,7 @@ const Register = () => {
                 <Header></Header>
             </div>
 
-            <div className="flex items-center justify-center py-32">
+            <div data-aos='fade-up' className="flex items-center justify-center py-32">
                 <Card color="transparent" shadow={false}>
                     <Typography variant="h4" className="text-[#333333]">
                         Sign Up

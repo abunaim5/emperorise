@@ -8,10 +8,12 @@ import Header from "../../components/Common/Header/Header";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../../components/Common/Footer/Footer";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 const Login = () => {
     const { logInUser, user, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
@@ -57,7 +59,15 @@ const Login = () => {
                 toast.success('Successfully logged in with github')
             })
             .catch(error => console.error(error.message))
-    }
+    };
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            delay: 200
+        });
+        AOS.refresh();
+    }, [])
 
     return (
         <div className="min-h-screen bg-[#F5F5DC]">
@@ -67,7 +77,7 @@ const Login = () => {
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>
-            <div className="flex items-center justify-center py-32">
+            <div data-aos='fade-up' className="flex items-center justify-center py-32">
                 <Card color="transparent" shadow={false}>
                     <Typography variant="h4" className="text-[#333333]">
                         Sign In
