@@ -15,7 +15,7 @@ const Gallery = () => {
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>
-            <div className="max-w-6xl mx-auto my-20 space-y-6">
+            <div className="max-w-6xl mx-auto my-20 space-y-6 px-2">
                 <h2 className="text-2xl font-extrabold text-[#333333]">Our Portfolio</h2>
                 <img className="w-full" src={gallery1} alt="" />
                 <img className="w-full" src={gallery2} alt="" />

@@ -34,20 +34,20 @@ const EstateDetails = () => {
             <div className="bg-[#4B0082]">
                 <Header></Header>
             </div>
-            <div className="max-w-6xl mx-auto my-32 flex items-center justify-center">
-                <div data-aos='fade-up' className="card glass rounded-none text-[#333333] flex-row">
-                    <figure className="w-1/2"><img className="h-full" src={image} alt="car!" /></figure>
+            <div className="max-w-6xl mx-auto my-32 flex items-center justify-center px-2">
+                <div data-aos='fade-up' className="card glass rounded-none text-[#333333] lg:flex-row">
+                    <figure className="w-full lg:w-1/2"><img className="h-full" src={image} alt="car!" /></figure>
                     <div className="card-body p-6">
-                        <h2 className="card-title text-4xl">{estate_title}</h2>
+                        <h2 className="card-title text-2xl md:text-4xl">{estate_title}</h2>
                         <p className="text-lg">{description}</p>
-                        <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><GrStatusInfo /></span><span>{status}</span></p>
-                        <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><MdOutlineHomeWork /></span><span>{segment_name}</span></p>
                         <ul className="list-disc list-inside">
                             <p className="text-lg">Facilities:</p>
                             {
                                 facilities.map((facility, idx) => <li key={idx}>{facility}</li>)
                             }
                         </ul>
+                        <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><GrStatusInfo /></span><span>{status}</span></p>
+                        <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><MdOutlineHomeWork /></span><span>{segment_name}</span></p>
                         <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><MdOutlineAreaChart /></span><span>{area}</span></p>
                         <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><GrLocation /></span><span>{location}</span></p>
                         <p className="flex items-center gap-2 text-lg"><span className="text-2xl"><IoPricetagOutline /></span><span>{price}</span></p>

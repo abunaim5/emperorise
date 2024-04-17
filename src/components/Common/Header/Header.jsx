@@ -28,11 +28,11 @@ const Header = () => {
         <div>
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <div className="dropdown ">
+                        <div tabIndex={0} role="button" className="btn btn-ghost px-0 pr-2  lg:hidden text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm text-[#333333] dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm text-[#333333] dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-none w-52">
                             {links}
                         </ul>
                     </div>
@@ -56,8 +56,8 @@ const Header = () => {
                                 <li onClick={handleLogOut}><button>Logout</button></li>
                             </ul>
                         </div> : <div className="space-x-3">
-                            <Link to='/register'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Sign Up</button></Link>
-                            <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-7 py-2 text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
+                            <Link to='/register'><button className="btn w-auto h-auto min-h-max rounded-none px-3 md:px-7 py-2 text-base md:text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Sign Up</button></Link>
+                            <Link to='/login'><button className="btn w-auto h-auto min-h-max rounded-none px-3 md:px-7 py-2 text-base md:text-lg font-semibold hover:text-[#333333] border border-[#C0C0C0] hover:border-transparent text-[#C0C0C0] bg-transparent hover:bg-[#FFD700]">Login</button></Link>
                         </div>
                     }
                 </div>

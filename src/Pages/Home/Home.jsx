@@ -25,7 +25,7 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div className="my-20 max-w-6xl mx-auto">
+            <div className="my-20 max-w-6xl mx-auto px-2">
                 <Estate></Estate>
             </div>
             <div className="bg-[#4B0082]">

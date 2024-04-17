@@ -40,8 +40,8 @@ const Banner = () => {
                     <div style={{ backgroundImage: `url(${slideImg1})` }} className="h-full w-full bg-cover bg-no-repeat bg-center">
                         <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
                             <div className='max-w-6xl mx-auto'>
-                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Explore Exclusive Properties</h1>
-                                <h3 className='text-3xl font-semibold text-white text-left mb-10'>We promise to understand your unique needs</h3>
+                                <h1 className='text-left text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Explore Exclusive Properties</h1>
+                                <h3 className='text-xs md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white text-left mb-10'>We promise to understand your unique needs</h3>
                                 <SecondaryButton></SecondaryButton>
                             </div>
                         </div>
@@ -51,8 +51,8 @@ const Banner = () => {
                     <div style={{ backgroundImage: `url(${slideImg2})` }} className="h-full w-full bg-cover bg-no-repeat bg-bottom">
                         <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
                             <div className='max-w-6xl mx-auto'>
-                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Discover Your Dream Residence</h1>
-                                <h3 className='text-4xl font-semibold text-white text-left mb-10'>We build your dream house</h3>
+                                <h1 className='text-left text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Discover Your Dream Residence</h1>
+                                <h3 className='text-xs md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white text-left mb-10'>We build your dream house</h3>
                                 <SecondaryButton></SecondaryButton>
                             </div>
                         </div>
@@ -62,8 +62,8 @@ const Banner = () => {
                     <div style={{ backgroundImage: `url(${slideImg3})` }} className="h-full w-full bg-cover bg-no-repeat bg-center">
                         <div className='bg-[#4B0082] h-full bg-opacity-45 flex items-center justify-center'>
                             <div className='max-w-6xl mx-auto'>
-                                <h1 className='text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Luxury Living Redefined</h1>
-                                <h3 className='text-4xl font-semibold text-white text-left mb-10'>Provide a decent level of comfort</h3>
+                                <h1 className='text-left text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold font-playfair text-[#FFD700] mb-8'>Luxury Living Redefined</h1>
+                                <h3 className='text-xs md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white text-left mb-10'>Provide a decent level of comfort</h3>
                                 <SecondaryButton></SecondaryButton>
                             </div>
                         </div>
