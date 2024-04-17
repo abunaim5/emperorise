@@ -45,7 +45,7 @@ const UserProfile = () => {
                             </span>
                             <span className="flex items-center space-x-2">
                                 <span className="text-green-400 text-2xl"><MdOutlinePhotoSizeSelectActual /></span>
-                                <span className="text-xs md:text-base">{user && user?.photoURL}</span>
+                                <span>{user && user?.photoURL.slice(0, 40)}</span>
                             </span>
                         </div>
                     </div>

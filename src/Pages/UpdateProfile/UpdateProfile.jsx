@@ -47,13 +47,13 @@ const UpdateProfile = () => {
             </div>
             <div className="px-2">
                 <div data-aos='fade-up' className="max-w-6xl mx-auto my-32 flex items-center justify-center card glass rounded-none">
-                    <form onSubmit={handleSubmit(onSubmit)} className="">
-                        <fieldset className="grid grid-cols-4 gap-6 p-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+                        <fieldset className="grid grid-cols-4 gap-6 p-6 w-full">
                             <div className="space-y-2 col-span-full lg:col-span-2">
                                 <p className="font-bold text-2xl">Update Your Profile</p>
                                 <p><span className="font-semibold">Name: </span><span>{user && user?.displayName}</span></p>
                                 <p><span className="font-semibold">Email: </span><span>{user && user?.email || 'Not provide'}</span></p>
-                                <p className=""><span className="font-semibold">Photo URL: </span><span className="md:text-base text-xs">{user && user?.photoURL}</span></p>
+                                <p className=""><span className="font-semibold">Photo URL: </span><span>{user && user?.photoURL.slice(0, 40)}</span></p>
                             </div>
                             <div className="space-y-6 text-[#333333] text-base col-span-full lg:col-span-2">
                                 <div className="sm:col-span-3">

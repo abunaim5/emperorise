@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { GiCrenelCrown } from "react-icons/gi";
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     useEffect(() => {
@@ -16,7 +17,7 @@ const Footer = () => {
         <footer data-aos='fade-down' className="p-10 max-w-6xl mx-auto text-[#C0C0C0] py-16 px-2">
             <div className="footer text-base pb-10 border-b border-[#C0C0C0]">
                 <aside className="">
-                    <h2 className="cursor-pointer text-xl md:text-2xl justify-start md:justify-center font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</h2>
+                    <Link to='/' className="cursor-pointer text-xl md:text-2xl justify-start md:justify-center font-bold text-[#FFD700] flex items-center gap-1"><span className="text-3xl"><GiCrenelCrown /></span>Emperorise</Link>
                     <p className="text-base">Emperorise Industries Ltd.<br />Providing your dream properties since 2015</p>
                 </aside>
                 <nav className="">

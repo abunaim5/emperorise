@@ -14,6 +14,7 @@ Welcome to Emperorise, your premier destination for luxury real estate. Explore 
 * AOS Package
 * React Hook Form
 * Swiper Slider
+* Animate.css
 
 ### Contributing:
 We welcome contributions from the community to enhance Emperorise and provide an even more exceptional experience for our users. Please refer to our Contribution Guidelines for more information.
