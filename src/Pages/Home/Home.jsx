@@ -6,6 +6,7 @@ import Estate from "../../components/Estate/Estate";
 import { ColorRing } from "react-loader-spinner";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet";
+import Services from "../../components/Services/Services";
 
 const Home = () => {
     const {loading} = useContext(AuthContext);
@@ -27,6 +28,9 @@ const Home = () => {
             </div>
             <div className="my-20 max-w-6xl mx-auto px-2">
                 <Estate></Estate>
+            </div>
+            <div className="mb-20 max-w-6xl mx-auto px-2">
+                <Services></Services>
             </div>
             <div className="bg-[#4B0082]">
                 <Footer></Footer>

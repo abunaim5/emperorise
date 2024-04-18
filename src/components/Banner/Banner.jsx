@@ -17,19 +17,8 @@ import 'animate.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import SecondaryButton from '../Common/SecondaryButton/SecondaryButton';
-// import { useEffect } from 'react';
-// import AOS from 'aos'
-// import "aos/dist/aos.css";
 
 const Banner = () => {
-
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 1500,
-    //         delay: 200
-    //     });
-    //     AOS.refresh();
-    // }, [])
 
     return (
         <div>
