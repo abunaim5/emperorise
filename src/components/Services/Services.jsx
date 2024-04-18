@@ -28,7 +28,7 @@ const Services = () => {
                     </div>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-[#333333]">Sell your home with us</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>Sell your home with Emperorise and experience the pinnacle of luxury real estate expertise.</p>
                         <div className="card-actions mt-4">
                             <button className="btn border hover:text-[#333333] text-white hover:border-[#4B0082] border-transparent hover:bg-transparent bg-[#4B0082] rounded-none">See More</button>
                         </div>
@@ -42,7 +42,7 @@ const Services = () => {
                     </div>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-[#333333]">Buy a home with us</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>Discover your dream home with Emperorise, where luxury meets opportunity.</p>
                         <div className="card-actions mt-4">
                             <button className="btn border hover:text-[#333333] text-white hover:border-[#4B0082] border-transparent hover:bg-transparent bg-[#4B0082] rounded-none">See More</button>
                         </div>
@@ -56,7 +56,7 @@ const Services = () => {
                     </div>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-[#333333]">Evaluate your home for free</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>Unlock the true value of your property with Emperorise&apos;s complimentary home evaluation service.</p>
                         <div className="card-actions mt-4">
                             <button className="btn border hover:text-[#333333] text-white hover:border-[#4B0082] border-transparent hover:bg-transparent bg-[#4B0082] rounded-none">See More</button>
                         </div>
@@ -70,7 +70,7 @@ const Services = () => {
                     </div>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-[#333333]">Free certified appraisal</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>Experience peace of mind with Emperorise&apos;s free certified appraisal service. </p>
                         <div className="card-actions mt-4">
                             <button className="btn border hover:text-[#333333] text-white hover:border-[#4B0082] border-transparent hover:bg-transparent bg-[#4B0082] rounded-none">See More</button>
                         </div>
